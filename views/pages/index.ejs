@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <?- include('../partials/head') -?>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .carousel,
+    .carousel-inner,
+    .carousel-item {
+      height: 100vh; /* Full height of the viewport */
+    }
+
+    .carousel-item img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    .container.text-center {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      color: white;
+      text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    }
+  </style>
+
+  <body>
+    <?- include('../partials/header') -?>
+    <?- include('../partials/nav') -?>
+
+    <div class="container text-center">
+      <h1><?= pageData.title ?></h1>
+      <p>Welcome to <?= pageData.title ?></p>
+    </div>
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://cdn.papershift.com/20220808070712/freelancing-work-and-its-statutory-laws-and-regulations-in-the-UK-explained-by-Papershift-min-910x500.jpeg" alt="Slide 1">
+        </div>
+        <div class="carousel-item">
+          <img src="https://via.placeholder.com/1920x1080?text=Slide+2" alt="Slide 2">
+        </div>
+        <div class="carousel-item">
+          <img src="https://via.placeholder.com/1920x1080?text=Slide+3" alt="Slide 3">
+        </div>
+      </div>
+    </div>
+
+    <?- include('../partials/footer') -?>
+  </body>
+</html>
